@@ -1,75 +1,68 @@
-# 🏆 Hi! Paris Hackathon 2026 — PISA Data Challenge
+# 🏆 Hi! Paris Hackathon 2024 — Water Shortage Prediction
 
-> **Top 3 / 400+** participants · Polytechnique × HEC Paris
+> AI & Sustainability · Hi! PARIS (HEC × Institut Polytechnique)
 
 ## 📋 Overview
 
-Data science competition predicting **mathematical performance scores** of **1.7 million students** from the [PISA](https://www.oecd.org/pisa/) dataset. Our team achieved **R² ≈ 0.77** on the test set.
+Participated in a Data Science hackathon focused on **predicting groundwater levels in France** to address water shortage risks.
+
+The project involved building a Machine Learning model using a large-scale dataset combining:
+- Weather data
+- Hydrology
+- Water abstraction
+- Socio-economic indicators
 
 ## 🎯 Challenge
 
-Given socio-economic, educational, and behavioral features from the PISA survey, predict each student's math score with maximum accuracy.
+Predict the **groundwater level category during summer months**, a critical period for drought and water stress.
+
+Dataset:
+- **3M+ rows**
+- **136 features**
+- Environmental + economic data
 
 ## 🔧 Approach
 
-### Feature Engineering
-- **Missing data handling**: Advanced imputation for datasets with 50%+ missing values
-- **Target encoding** for high-cardinality categoricals
-- **Interaction features** and domain-specific encodings
+### Data Preprocessing
+- Cleaning invalid values (e.g. extreme altitude values)
+- Handling missing data with median imputation
+- Feature selection based on domain relevance
+- Encoding categorical variables
 
 ### Modeling
-- **Ensemble** of gradient boosting models:
-  - `XGBoost`
-  - `LightGBM`
-  - `GradientBoosting` (scikit-learn)
-- **Optuna** automated hyperparameter tuning
-- **Stacking** with ridge regression meta-learner
+- **Random Forest Classifier**
+- Robust to noise and high-dimensional data
+- Feature importance analysis for interpretability
 
-### Results
-| Metric | Score |
-|--------|-------|
-| R² (test) | ≈ 0.77 |
-| Ranking | Top 3 / 400+ |
+### Business Perspective
+- Integration into **insurance pricing models**
+- Dynamic premium adjustment based on water risk
+- Application for agriculture and sustainability
 
-## 🚀 Quick Start
+## 📊 Results
 
-```bash
-# Clone
-git clone https://github.com/yacine924/hiparis-hackathon.git
-cd hiparis-hackathon
+- Accuracy: **≈ 30.7%**
+- Identified key predictors:
+  - Rainfall
+  - Station altitude
+  - Temperature
 
-# Install dependencies
-pip install -r requirements.txt
+## 🚀 Project Deliverables
 
-# Run the pipeline
-python main.py
-```
-
-## 📂 Project Structure
-
-```
-hiparis-hackathon/
-├── data/                # Data loading & preprocessing
-├── features/            # Feature engineering pipelines
-├── models/              # Model training & ensembling
-├── notebooks/           # Exploratory analysis
-├── main.py              # Main pipeline script
-├── requirements.txt
-└── README.md
-```
+- Machine Learning model
+- Scientific & business report
+- Pitch presentation
 
 ## 🛠️ Technologies
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-189FDD?style=flat-square)
-![LightGBM](https://img.shields.io/badge/LightGBM-02569B?style=flat-square)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Optuna](https://img.shields.io/badge/Optuna-4B8BBE?style=flat-square)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+- Python
+- Pandas
+- Scikit-learn
+- Jupyter Notebook
 
 ## 👥 Team
 
-- **Yacine Hadioui** — Double BSc Maths & CS, Sorbonne Paris Nord
+- Group 59 (Sorbonne Paris Nord × HEC Paris)
 
 ## 📄 License
 
